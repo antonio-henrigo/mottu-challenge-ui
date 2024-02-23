@@ -1,0 +1,22 @@
+<div class="container">
+  <span class="title">Favoritos</span>
+</div>
+
+<app-message *ngIf="this.filteredCharacters?.length == 0" [showMessageTitle]="showMessageTitle" [showMessageDescription]="showMessageDescription"></app-message>
+
+<div class="center-container">
+<div class="card-container">
+  <div class="column" *ngFor="let character of filteredCharacters">
+    <div class="card">
+      <div class="favorite-icon" (click)="toggleFavorite(character)">
+        <span class="material-icons" *ngIf="!isFavorite(character)">favorite_border</span>
+        <span class="material-icons favorited-icon" *ngIf="isFavorite(character)">favorite</span>
+      </div>
+      <img [src]="character.image" alt="{{ character.name }}">
+      <p>{{ character.name }}</p>
+      <div>{{ character.species }}</div>
+      <div>{{ character.type }}</div>
+    </div>
+  </div>
+</div>
+</div>

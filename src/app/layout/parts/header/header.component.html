@@ -1,0 +1,18 @@
+<div class="header">
+  <div class="image">
+    <img src="../assets/image/logo-rick-and-morty.png" alt="Logo" class="logo">
+
+    <div class="button-group">
+      <a class="button rounded-right" [ngClass]="{'selected': homeSelected, 'not-selected': !homeSelected}" [style.background-color]="homeSelected ? '#FFFFFF' : '#0A0A0A'" [style.color]="homeSelected ? '#0A0A0A' : '#A4A4A4'" (click)="goToHome()">
+        <span class="material-icons" [style.color]="homeSelected ? '#0A0A0A' : '#A4A4A4'">home</span>
+        Início
+      </a>
+      <a class="button rounded-left" [ngClass]="{'selected': favoriteSelected, 'not-selected': !favoriteSelected}" [style.background-color]="favoriteSelected ? '#FFFFFF' : '#0A0A0A'" [style.color]="favoriteSelected ? '#0A0A0A' : '#A4A4A4'" (click)="goToFavorite()">
+        <span class="material-icons" [style.color]="favoriteSelected ? '#0A0A0A' : '#A4A4A4'">favorite</span>
+        Favoritos <span class="favorite-count">{{ favoriteCount }}</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+

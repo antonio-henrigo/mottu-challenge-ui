@@ -1,0 +1,25 @@
+<div class="search-container">
+  <span class="title">Início</span>
+  <mat-form-field class="form-field" appearance="outline">
+    <mat-label>Pesquisar</mat-label>
+    <input matInput type="text" #searchInput (input)="filterCharacters(searchInput.value)">
+  </mat-form-field>
+</div>
+
+<app-message *ngIf="showMessage" [showButton]="false"></app-message>
+
+
+<div class="card-container">
+  <div class="column" *ngFor="let character of filteredCharacters">
+    <div class="card">
+      <div class="favorite-icon" (click)="toggleFavorite(character)">
+        <span class="material-icons" *ngIf="!isFavorite(character)">favorite_border</span>
+        <span class="material-icons favorited-icon" *ngIf="isFavorite(character)">favorite</span>
+      </div>
+      <img [src]="character.image" alt="{{ character.name }}">
+      <p>{{ character.name }}</p>
+      <div>{{ character.species }}</div>
+      <div>{{ character.type }}</div>
+    </div>
+  </div>
+</div>
