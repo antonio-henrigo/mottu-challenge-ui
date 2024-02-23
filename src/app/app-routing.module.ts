@@ -6,6 +6,7 @@ import { ContentComponent } from './layout/content/content.component';
 const routes: Routes = [
   { path: 'inicio', component: ContentComponent },
   { path: 'favoritos', component: FavoriteComponent },
+  { path: '', redirectTo: '/inicio', pathMatch: 'full' },
 ];
 
 @NgModule({
