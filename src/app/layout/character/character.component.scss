@@ -1,7 +1,6 @@
 .search-container {
   margin: 0 auto;
   margin-top: 50px;
-  width: 720px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -156,7 +155,8 @@
     align-items: center;
     margin-left: -10px;
     margin-right: -10px;
-    flex-direction: column; /* Alteração para uma coluna na versão mobile */
+    flex-direction: column;
+    margin-left: -110px;
   }
 
   .column {
