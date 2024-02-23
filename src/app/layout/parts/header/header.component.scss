@@ -78,17 +78,19 @@
 
 @media only screen and (max-width: 768px) {
   .image {
-    margin: 0 10px;
+    margin: 0 15px;
   }
 
   .logo {
     width: 80px;
     height: auto;
     margin-left: 0;
+    margin-top: 7px;
   }
 
   .button-group {
     margin-right: 10px;
+    margin-top: 12px;
   }
 
   .button {
