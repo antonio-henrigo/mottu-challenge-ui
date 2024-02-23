@@ -45,7 +45,6 @@ export class CharacterComponent {
 
   toggleFavorite(character: Character): void {
     this.favoriteService.toggleFavorite(character);
-    console.log(`${character.name} was toggled to ${this.isFavorite(character)}`);
   }
 
   getFavoriteCount(): number {
